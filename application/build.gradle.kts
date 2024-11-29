@@ -5,7 +5,7 @@ plugins {
     id("io.spring.dependency-management") version "1.1.5"
 }
 
-group = "nu.bldr.demo.hexagonal-prototype"
+group = "nu.bldr.demo.hexagonalprototype"
 version = "0.0.1-SNAPSHOT"
 
 java {
