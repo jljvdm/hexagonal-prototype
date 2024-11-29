@@ -1,7 +1,7 @@
 rootProject.name = 'hexagonal-prototype'
 
 include 'domain'
-include 'adapter'
+include 'hexagonal'
 include 'restapi'
 include 'infrastructure'
 include 'application'
