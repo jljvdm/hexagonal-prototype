@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="hexagonalprototype.hexagonal.main" />
+        <module name="hexagonalprototype.hexagonal.test" />
+        <module name="hexagonalprototype.restapi.test" />
+        <module name="hexagonalprototype.infrastructure.test" />
+        <module name="hexagonalprototype.restapi.main" />
+        <module name="hexagonalprototype.infrastructure.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hexagonal-prototype.buildSrc" target="23" />
+      <module name="hexagonal-prototype.buildSrc.main" target="23" />
+      <module name="hexagonal-prototype.buildSrc.test" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

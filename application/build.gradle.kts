@@ -18,11 +18,25 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    implementation.configure {
+        exclude(module = "spring-boot-starter-tomcat")
+        exclude("org.apache.tomcat")
+    }
+}
+
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-undertow")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("io.github.linpeilie:mapstruct-plus-spring-boot-starter:1.4.6")
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-api:2.7.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webflux-ui:2.7.0")
+    implementation(project(":domain"))
+    implementation(project(":hexagonal"))
+    implementation(project(":restapi"))
+    implementation(project(":infrastructure"))
     developmentOnly("org.springframework.boot:spring-boot-devtools")
-    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
