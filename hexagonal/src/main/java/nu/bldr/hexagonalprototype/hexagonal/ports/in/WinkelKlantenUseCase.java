@@ -8,7 +8,7 @@ public interface WinkelKlantenUseCase {
 
     void addBoodschap(String boodschap);
     void removeBoodschap(String id);
-    String betaal();
+    String betaal(String winkelkarId);
     void setBetaalmiddel(String betaalmiddel);
     Winkelkar getWinkelkar();
 

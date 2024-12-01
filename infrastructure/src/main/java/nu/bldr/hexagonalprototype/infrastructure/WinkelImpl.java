@@ -1,20 +1,24 @@
 package nu.bldr.hexagonalprototype.infrastructure;
 
+import lombok.AllArgsConstructor;
 import nu.bldr.hexagonalprototype.domain.Winkel;
 import nu.bldr.hexagonalprototype.hexagonal.ports.out.WinkelPort;
+import nu.bldr.hexagonalprototype.infrastructure.services.PersistenceService;
 
 import java.math.BigDecimal;
 
+@AllArgsConstructor
 public class WinkelImpl implements WinkelPort {
+    PersistenceService persistenceService;
 
     @Override
     public BigDecimal getOmzet() {
-        return null;
+        return persistenceService.getOmzet();
     }
 
     @Override
-    public BigDecimal werkOmzetBij(BigDecimal omzet) {
-        return null;
+    public BigDecimal werkOmzetBij(BigDecimal deltaOmzet) {
+        return persistenceService.werkOmzetBij(deltaOmzet);
     }
 
     @Override

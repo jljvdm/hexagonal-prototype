@@ -24,7 +24,7 @@ public class KlantenWebServices {
 
     WinkelkarMapper winkelkarMapper;
 
-    @RequestMapping("/addBoodschap")
+    @PutMapping("/addBoodschap")
     public Mono<String> addBoodschap(String boodschap) {
         winkelKlantenUseCase.addBoodschap(boodschap);
         return Mono.just("Boodschap %s toegevoegd".formatted(boodschap));
@@ -37,8 +37,8 @@ public class KlantenWebServices {
     }
 
     @PostMapping("/betaal")
-    public Mono<String> betaal() {
-        return Mono.just(winkelKlantenUseCase.betaal());
+    public Mono<String> betaal(String winkelkarId) {
+        return Mono.just(winkelKlantenUseCase.betaal(winkelkarId));
     }
 
     @PutMapping("/setBetaalmiddel")

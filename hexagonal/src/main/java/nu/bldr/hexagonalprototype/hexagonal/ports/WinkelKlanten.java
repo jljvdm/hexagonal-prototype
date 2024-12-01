@@ -24,24 +24,24 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
 
     @Override
     public void addBoodschap(String boodschap) {
-        winkelkarPort.addBoodschap(boodschap, );
+        winkelkarPort.addBoodschap(boodschap, "emptyid");
     }
 
     @Override
     public void removeBoodschap(String id) {
-        winkelkarPort.removeBoodschap(id, );
+        winkelkarPort.removeBoodschap(id, "emptyid");
     }
 
     @Override
-    public String betaal() {
+    public String betaal(String winkelkarId) {
         String betaalmiddel = winkelkarPort.getBetaalmiddel();
-        winkelkarPort.betaal();
+        winkelkarPort.betaal(winkelkarId);
         return "Bedankt voor het betalen met de %s".formatted(betaalmiddel);
     }
 
     @Override
     public void setBetaalmiddel(String betaalmiddel) {
-        winkelkarPort.setBetaalmiddel(betaalmiddel, );
+        winkelkarPort.setBetaalmiddel(betaalmiddel, "emptyid" );
     }
 
     @Override
