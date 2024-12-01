@@ -27,7 +27,7 @@ configurations {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webflux")
-    implementation("org.springframework.boot:spring-boot-starter-undertow")
+    //implementation("org.springframework.boot:spring-boot-starter-undertow")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("io.github.linpeilie:mapstruct-plus-spring-boot-starter:1.4.6")
     implementation("org.springdoc:springdoc-openapi-starter-webflux-api:2.7.0")

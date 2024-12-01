@@ -1,12 +1,21 @@
 package nu.bldr.hexagonalprototype.hexagonal.ports.in;
 
-import nu.bldr.hexagonalprototype.domain.Winkelkar;
+import nu.bldr.hexagonalprototype.domain.Winkel;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Map;
 
 public interface WinkelUseCase {
 
-    void addBoodschap(String boodschap);
-    void removeBoodschap(String id);
-    String betaal();
-    void setBetaalmiddel(String betaalmiddel);
-    Winkelkar getWinkelkar();
+    public List<Winkel.Product> getProducten();
+
+    public BigDecimal getOmzet();
+
+    public Map<Winkel.Product, Integer> getVoorraad();
+
+    public Winkel getWinkel();
+
+    List<Winkel.Betaalmiddel> getBetaalmiddelen();
+
 }

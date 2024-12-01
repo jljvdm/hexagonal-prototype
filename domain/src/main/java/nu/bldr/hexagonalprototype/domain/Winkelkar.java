@@ -3,8 +3,9 @@ package nu.bldr.hexagonalprototype.domain;
 import java.util.List;
 
 public record Winkelkar(
+        String id,
         List<Boodschap> boodschappen,
-        Betaalmiddel betaalmiddel
+        Winkel.Betaalmiddel betaalmiddel
 )
 {
     public record Boodschap(
@@ -13,9 +14,5 @@ public record Winkelkar(
             double prijs
     ) {
     }
-    public enum Betaalmiddel {
-        CONTANT,
-        CREDITCARD,
-        BANKPAS
-    }
+
 }

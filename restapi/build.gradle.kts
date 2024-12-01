@@ -19,6 +19,7 @@ repositories {
 
 dependencies{
     compileOnly(project(":domain"))
+    compileOnly(project(":hexagonal"))
     compileOnly("org.springframework.boot:spring-boot:3.4.0")
     compileOnly("org.springframework.boot:spring-boot-starter-webflux:3.4.0")
     compileOnly("io.github.linpeilie:mapstruct-plus-spring-boot-starter:1.4.6")

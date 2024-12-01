@@ -2,11 +2,14 @@ package nu.bldr.hexagonalprototype.restapi;
 
 import lombok.AllArgsConstructor;
 import nu.bldr.hexagonalprototype.domain.Winkelkar;
+import nu.bldr.hexagonalprototype.hexagonal.ports.in.WinkelKlantenUseCase;
 import org.springframework.stereotype.Component;
 
 @Component
 @AllArgsConstructor
 public class WinkelBediende {
+
+    private final WinkelKlantenUseCase winkelUseCae;
 
 
     public String addBoodschap(String boodschap) {
