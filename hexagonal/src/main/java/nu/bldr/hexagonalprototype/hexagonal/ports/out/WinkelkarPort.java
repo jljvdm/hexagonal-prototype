@@ -3,11 +3,10 @@ package nu.bldr.hexagonalprototype.hexagonal.ports.out;
 import nu.bldr.hexagonalprototype.domain.Winkelkar;
 
 public interface WinkelkarPort {
-    void addBoodschap(String boodschap);
-    void removeBoodschap(String boodschap);
-    void betaal();
-    void setBetaalmiddel(String betaalmiddel);
+    void addBoodschap(String boodschap, String winkelkarId);
+    void removeBoodschap(String boodschap, String winkelkarId);
+    void betaal(String winkelkarId);
+    void setBetaalmiddel(String betaalmiddel, String winkelkarId);
     Winkelkar getWinkelkar();
-
     String getBetaalmiddel();
 }

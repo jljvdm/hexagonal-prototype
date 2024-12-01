@@ -24,12 +24,12 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
 
     @Override
     public void addBoodschap(String boodschap) {
-        winkelkarPort.addBoodschap(boodschap);
+        winkelkarPort.addBoodschap(boodschap, );
     }
 
     @Override
     public void removeBoodschap(String id) {
-        winkelkarPort.removeBoodschap(id);
+        winkelkarPort.removeBoodschap(id, );
     }
 
     @Override
@@ -41,7 +41,7 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
 
     @Override
     public void setBetaalmiddel(String betaalmiddel) {
-        winkelkarPort.setBetaalmiddel(betaalmiddel);
+        winkelkarPort.setBetaalmiddel(betaalmiddel, );
     }
 
     @Override

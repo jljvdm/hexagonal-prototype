@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
     compileOnly(project(":domain"))
+    compileOnly(project(":hexagonal"))
     compileOnly("org.springframework.boot:spring-boot:3.4.0")
     compileOnly ("org.projectlombok:lombok:1.18.36")
     annotationProcessor ("org.projectlombok:lombok:1.18.36")
