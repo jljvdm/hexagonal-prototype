@@ -27,7 +27,12 @@ public class WinkelkarImpl implements WinkelkarPort {
     }
 
     @Override
-    public Winkelkar getWinkelkar() {
+    public Winkelkar getNieuweWinkelkar() {
+        return null;
+    }
+
+    @Override
+    public Winkelkar getWinkelkar(String winkelkarId) {
         return null;
     }
 

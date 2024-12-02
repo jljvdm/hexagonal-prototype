@@ -2,6 +2,7 @@ package nu.bldr.hexagonalprototype.domain;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
+import java.util.List;
 
 public record Winkel(
         String naam,
@@ -11,7 +12,7 @@ public record Winkel(
 
         BigDecimal omzet,
 
-        Betaalmiddel betaalmiddelen
+        List<Betaalmiddel> betaalmiddelen
 ) {
     public record Product(
             String id,

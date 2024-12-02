@@ -1,4 +1,4 @@
-package nu.bldr.hexagonalprototype.restapi;
+package nu.bldr.hexagonalprototype.restapi.mapper;
 
 import org.mapstruct.Mapper;
 

@@ -2,14 +2,13 @@ package nu.bldr.hexagonalprototype.hexagonal.ports.in;
 
 import nu.bldr.hexagonalprototype.domain.Winkelkar;
 
-import java.util.List;
-
 public interface WinkelKlantenUseCase {
 
-    void addBoodschap(String boodschap);
-    void removeBoodschap(String id);
+    void addBoodschap(String boodschap, String winkelkarId);
+    void removeBoodschap(String id, String winkelkarId);
     String betaal(String winkelkarId);
-    void setBetaalmiddel(String betaalmiddel);
-    Winkelkar getWinkelkar();
+    void setBetaalmiddel(String betaalmiddel, String winkelkarId);
+    Winkelkar getNieuweWinkelkar();
+    Winkelkar getWinkelkar(String winkelkarId);
 
 }

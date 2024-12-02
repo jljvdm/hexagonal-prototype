@@ -7,6 +7,8 @@ public interface WinkelkarPort {
     void removeBoodschap(String boodschap, String winkelkarId);
     void betaal(String winkelkarId);
     void setBetaalmiddel(String betaalmiddel, String winkelkarId);
-    Winkelkar getWinkelkar();
+    Winkelkar getNieuweWinkelkar();
+    Winkelkar getWinkelkar(String winkelkarId);
     String getBetaalmiddel();
+
 }

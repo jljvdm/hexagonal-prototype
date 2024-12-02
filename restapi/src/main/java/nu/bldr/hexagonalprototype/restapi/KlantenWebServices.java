@@ -27,14 +27,14 @@ public class KlantenWebServices {
     WinkelkarMapper winkelkarMapper;
 
     @PutMapping("/addBoodschap")
-    public Mono<String> addBoodschap(String boodschap) {
-        winkelKlantenUseCase.addBoodschap(boodschap);
+    public Mono<String> addBoodschap(String boodschap, String winkelkarId) {
+        winkelKlantenUseCase.addBoodschap(boodschap, winkelkarId);
         return Mono.just("Boodschap %s toegevoegd".formatted(boodschap));
     }
 
-    @DeleteMapping("/removeBoodschap/{id}")
-    public Mono<String> removeBoodschap(@PathVariable("id") String boodschap) {
-        winkelKlantenUseCase.removeBoodschap(boodschap);
+    @DeleteMapping("/removeBoodschap/{id}/{winkelkarId}")
+    public Mono<String> removeBoodschap(@PathVariable("id") String boodschap, @PathVariable("winkelkarId") String winkelkarId) {
+        winkelKlantenUseCase.removeBoodschap(boodschap, winkelkarId);
         return Mono.just("Boodschap %s verwijderd".formatted(boodschap));
     }
 
@@ -44,19 +44,24 @@ public class KlantenWebServices {
     }
 
     @PutMapping("/setBetaalmiddel")
-    public Mono<String> setBetaalmiddel(String betaalmiddel) {
-        winkelKlantenUseCase.setBetaalmiddel(betaalmiddel);
+    public Mono<String> setBetaalmiddel(String betaalmiddel,String winkelkarId) {
+        winkelKlantenUseCase.setBetaalmiddel(betaalmiddel, winkelkarId);
         return Mono.just("Betaalmiddel %s ingesteld".formatted(betaalmiddel));
     }
 
-    @GetMapping("/getWinkelkar")
-    public Mono<WinkelkarDTO> getWinkelkar() {
-        return Mono.just(winkelkarMapper.toWinkelKarDTO(winkelKlantenUseCase.getWinkelkar()));
+    @GetMapping("/getNieuweWinkelkar")
+    public Mono<WinkelkarDTO> getNieuweWinkelkar() {
+        return Mono.just(winkelkarMapper.toWinkelKarDTO(winkelKlantenUseCase.getNieuweWinkelkar()));
+    }
+
+    @GetMapping("/getWinkelkar/{winkelkarId}")
+    public Mono<WinkelkarDTO> getWinkelkar(@PathVariable("winkelkarId") String winkelkarId) {
+        return Mono.just(winkelkarMapper.toWinkelKarDTO(winkelKlantenUseCase.getWinkelkar(winkelkarId)));
     }
 
     @GetMapping("/getBetaalmiddel")
     public Mono<String> getBetaalmiddel() {
-        return Mono.just(winkelKlantenUseCase.getWinkelkar().betaalmiddel().toString());
+        return Mono.just(winkelKlantenUseCase.getNieuweWinkelkar().betaalmiddel().toString());
     }
 
     @GetMapping("/getBetaalmiddelen")

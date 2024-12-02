@@ -23,13 +23,13 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
     private WinkelPort winkelPort;
 
     @Override
-    public void addBoodschap(String boodschap) {
-        winkelkarPort.addBoodschap(boodschap, "emptyid");
+    public void addBoodschap(String boodschap, String winkelkarId) {
+        winkelkarPort.addBoodschap(boodschap, winkelkarId);
     }
 
     @Override
-    public void removeBoodschap(String id) {
-        winkelkarPort.removeBoodschap(id, "emptyid");
+    public void removeBoodschap(String id, String winkelkarId) {
+        winkelkarPort.removeBoodschap(id, winkelkarId);
     }
 
     @Override
@@ -40,14 +40,20 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
     }
 
     @Override
-    public void setBetaalmiddel(String betaalmiddel) {
-        winkelkarPort.setBetaalmiddel(betaalmiddel, "emptyid" );
+    public void setBetaalmiddel(String betaalmiddel, String winkelkarId) {
+        winkelkarPort.setBetaalmiddel(betaalmiddel, winkelkarId );
     }
 
     @Override
-    public Winkelkar getWinkelkar() {
-        return winkelkarPort.getWinkelkar();
+    public Winkelkar getNieuweWinkelkar() {
+        return winkelkarPort.getNieuweWinkelkar();
     }
+
+    @Override
+    public Winkelkar getWinkelkar(String winkelkarId) {
+        return winkelkarPort.getWinkelkar(winkelkarId);
+    }
+
 
     @Override
     public List<Winkel.Betaalmiddel> getBetaalmiddelen() {
@@ -61,7 +67,7 @@ public class WinkelKlanten implements WinkelKlantenUseCase, WinkelUseCase {
 
     @Override
     public BigDecimal getOmzet() {
-        return null;
+        return winkelPort.getOmzet();
     }
 
     @Override
