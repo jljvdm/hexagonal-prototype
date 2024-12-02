@@ -1,2 +1,2 @@
 rootProject.name = "hexagonalprototype"
-include ( "domain", "application", "hexagonal", "restapi", "infrastructure", "application")
+include ( "domain", "hexagonal", "restapi", "infrastructure", "application")

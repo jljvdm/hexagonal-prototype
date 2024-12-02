@@ -1,5 +1,6 @@
 package nu.bldr.hexagonalprototype.restapi;
 
+import lombok.AllArgsConstructor;
 import nu.bldr.hexagonalprototype.hexagonal.ports.in.WinkelUseCase;
 import nu.bldr.hexagonalprototype.restapi.dto.ProductDTO;
 import nu.bldr.hexagonalprototype.restapi.dto.VoorraadDTO;
@@ -11,7 +12,8 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
-@RequestMapping("/winkel ")
+@RequestMapping("/winkel")
+@AllArgsConstructor
 public class WinkelWebServices {
 
     WinkelUseCase winkelUseCase;

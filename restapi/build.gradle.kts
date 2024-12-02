@@ -25,6 +25,7 @@ dependencies{
     compileOnly("io.github.linpeilie:mapstruct-plus-spring-boot-starter:1.4.6")
     compileOnly ("org.projectlombok:lombok:1.18.36")
     annotationProcessor ("org.projectlombok:lombok:1.18.36")
+    annotationProcessor ("org.mapstruct:mapstruct-processor:1.6.3")
 
     testCompileOnly ("org.projectlombok:lombok:1.18.36")
     testAnnotationProcessor ("org.projectlombok:lombok:1.18.36")

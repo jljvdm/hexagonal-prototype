@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/hexagonal/hexagonalprototype.hexagonal.main.iml" filepath="$PROJECT_DIR$/.idea/modules/hexagonal/hexagonalprototype.hexagonal.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/infrastructure/hexagonalprototype.infrastructure.main.iml" filepath="$PROJECT_DIR$/.idea/modules/infrastructure/hexagonalprototype.infrastructure.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/restapi/hexagonalprototype.restapi.main.iml" filepath="$PROJECT_DIR$/.idea/modules/restapi/hexagonalprototype.restapi.main.iml" />
     </modules>
   </component>

@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import nu.bldr.hexagonalprototype.domain.Winkel;
 import nu.bldr.hexagonalprototype.hexagonal.ports.out.WinkelPort;
 import nu.bldr.hexagonalprototype.infrastructure.services.PersistenceService;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 @AllArgsConstructor
 public class WinkelImpl implements WinkelPort {
     PersistenceService persistenceService;
